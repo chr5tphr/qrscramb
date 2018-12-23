@@ -1,7 +1,7 @@
 path pbox = (.0,.0)--(1.,0.)--(1.,1.)--(0.,1.)--cycle;
 path box = shift(-.5,-.5) * pbox;
 path hcirc = scale(.5) * unitcircle;
-path tria = shift(0., -.1) * scale(.6) * polygon(3);
+path tria = shift(0., -.2) * scale(.65) * polygon(3);
 path dia = ((0,-.5)--(.5,0.)--(0.,.5)--(-.5,0.)--cycle);
 path penta = scale(.5) * polygon(5);
 path hexa = scale(.5) * polygon(6);
@@ -29,8 +29,9 @@ picture drawmat(int[][] mat){
     pair size = (mat.length, mat[0].length);
     pair isize = (1./size.x, 1./size.y);
 
-    pen bg = gray(0.9);
-    fill(im, pbox, bg);
+    //pen bg = gray(0.9);
+    //pen p = linewidth(isize.x / 10);
+    //draw(im, scale(1.1)*pbox, p);
 
     transform scl = scale(.9/size.x, .9/size.y);
 
